@@ -1,0 +1,2 @@
+class IncorrectDimensionError(Exception):
+    pass
