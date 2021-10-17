@@ -66,11 +66,17 @@ class GoldsteinPrice(TestFunction):
 
 
 class Booth(TestFunction):
+    """
+    Class that implements the Booth function
+    """
     def formula(self, point: np.ndarray) -> float:
         return (point[0] + 2*point[1] - 7)**2 + (2*point[0] + point[1] - 5)**2
 
 
 class Bukin(TestFunction):
+    """
+    Class that implements the Bukin function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -78,11 +84,17 @@ class Bukin(TestFunction):
 
 
 class Matyas(TestFunction):
+    """
+    Class that implements the Matyas function
+    """
     def formula(self, point: np.ndarray) -> float:
         return 0.26*(point[0]**2 + point[1]**2) - 0.48*point[0]*point[1]
 
 
 class Levi(TestFunction):
+    """
+    Class that implements the Levi function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -91,6 +103,9 @@ class Levi(TestFunction):
 
 
 class Himmelblau(TestFunction):
+    """
+    Class that implements the Himmelblau function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -98,6 +113,9 @@ class Himmelblau(TestFunction):
 
 
 class ThreeHumpCamel(TestFunction):
+    """
+    Class that implements the ThreeHumpCamel function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -105,6 +123,9 @@ class ThreeHumpCamel(TestFunction):
 
 
 class Easom(TestFunction):
+    """
+    Class that implements the Easom function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -112,6 +133,9 @@ class Easom(TestFunction):
 
 
 class CrossInTray(TestFunction):
+    """
+    Class that implements the CrossInTray function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -120,6 +144,9 @@ class CrossInTray(TestFunction):
 
 
 class EggHolder(TestFunction):
+    """
+    Class that implements the EggHolder function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -128,6 +155,9 @@ class EggHolder(TestFunction):
 
 
 class Holder(TestFunction):
+    """
+    Class that implements the Holder function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -135,6 +165,9 @@ class Holder(TestFunction):
 
 
 class McCormick(TestFunction):
+    """
+    Class that implements the McCormick function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -142,6 +175,9 @@ class McCormick(TestFunction):
 
 
 class SchafferN2(TestFunction):
+    """
+    Class that implements the SchafferN2 function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -149,6 +185,9 @@ class SchafferN2(TestFunction):
 
 
 class SchafferN4(TestFunction):
+    """
+    Class that implements the SchafferN4 function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
@@ -156,6 +195,9 @@ class SchafferN4(TestFunction):
 
 
 class StyblinskiTang(TestFunction):
+    """
+    Class that implements the StyblinskiTang function
+    """
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")

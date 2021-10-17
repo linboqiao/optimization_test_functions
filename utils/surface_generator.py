@@ -3,7 +3,7 @@ import plotly.graph_objects as go
 import test_functions.functions as functions_factory
 
 
-class Visualizer:
+class SurfaceGenerator:
     """
     Visualizer class to plot the selected functions in Plotly
     """
@@ -33,20 +33,20 @@ class Visualizer:
         self.x_limits = x_limits
         self.y_limits = y_limits
 
-    def plot(self):
+    def get(self) -> go.Surface:
+        """
+        Returns the Surface of the function provided
+        :return: go.Surface
+        """
         function_class = getattr(functions_factory, self.function_name)(dimension=self.dimension)
         xyz = function_class.get_plot_data(self.n_points, self.x_limits, self.y_limits)
 
-        fig = go.Figure(
-            data=[go.Surface(
-                x=xyz[0],
-                y=xyz[1],
-                z=xyz[2],
-                colorscale="Rainbow",
-                opacity=1,
-                showscale=False)]
+        return go.Surface(
+            x=xyz[0],
+            y=xyz[1],
+            z=xyz[2],
+            colorscale="Rainbow",
+            opacity=1,
+            showscale=False,
+            visible=False
         )
-        fig.show()
-
-
-
