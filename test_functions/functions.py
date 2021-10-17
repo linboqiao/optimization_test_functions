@@ -139,8 +139,8 @@ class CrossInTray(TestFunction):
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
-        return -0.0001*(np.abs(np.sin(point[0])*np.sin(point[1]*np.exp(np.abs(
-            100 - (np.sqrt(point[0]**2 + point[1]**2) / np.pi))))) + 1)**0.1
+        return -0.0001*(np.abs(np.sin(point[0])*np.sin(point[1])*np.exp(np.abs(
+            100 - (np.sqrt(point[0]**2 + point[1]**2) / np.pi)))) + 1)**0.1
 
 
 class EggHolder(TestFunction):
@@ -161,7 +161,7 @@ class Holder(TestFunction):
     def formula(self, point: np.ndarray) -> float:
         if self.dimension != 2:
             raise IncorrectDimensionError("This function is only allowed for 2 dimensions")
-        return np.abs(np.sin(point[0])*np.cos(point[1])*np.exp(np.abs(1. - (np.sqrt(point[0]**2 + point[1]**2)/np.pi))))
+        return - np.abs(np.sin(point[0])*np.cos(point[1])*np.exp(np.abs(1. - (np.sqrt(point[0]**2 + point[1]**2)/np.pi))))
 
 
 class McCormick(TestFunction):

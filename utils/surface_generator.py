@@ -16,11 +16,25 @@ class SurfaceGenerator:
         """
         :param function_name: Function name to select among:
             - Rastrigin
-            - Ackley,
+            - Ackley
             - Sphere
             - Rosenbrock
             - Beale
             - GoldsteinPrice
+            - Booth
+            - Bukin
+            - Matyas
+            - Levi
+            - Himmelblau
+            - ThreeHumpCamel
+            - Easom
+            - CrossInTray
+            - EggHolder
+            - Holder
+            - McCormick
+            - SchafferN2
+            - SchafferN4
+            - StyblinskiTang
         :param n_points: It refers to the number of points in the x and y axes. The total
         number of points in the surface will be the cartesian product (n * n)
         :param dimension: Dimension
